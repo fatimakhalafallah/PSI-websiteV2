@@ -1,0 +1,98 @@
+.feature{
+     //note the defautl style is the mobile
+    background-color: $lightGrayishBlue;
+
+    text-align: center;
+    @include breakpoint-up(medium){
+        text-align: left;
+    }
+    &__intro {
+         margin-bottom: 3.75rem;
+         @include breakpoint-up(large){ 
+             width:65%;
+         }
+      }
+
+      &__ach{
+        a {
+            color: inherit;
+            text-decoration: none;
+          }
+          
+          & {
+            background:
+              linear-gradient(
+                to right,
+                hsl(220, 16%, 96%),
+                hsl(220, 16%, 96%)
+              ),
+              linear-gradient(
+                to right,
+                 rgb(154, 72, 72), hsl(0, 0%, 98%), hsl(233deg 8% 62%));
+            ;
+            background-size: 100% 3px, 0 3px;
+            background-position: 100% 100%, 0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 400ms;
+          }
+          
+          &:hover {
+            background-size: 0 3px, 100% 3px;
+          }
+
+    
+    }
+    
+
+    &__grid{
+        @include breakpoint-up(medium){
+            display:flex;
+            flex-wrap:wrap;
+        }
+    }
+
+    &__items{  
+        padding: 0.9375rem;
+        //border:1px solid magenta;
+        @include breakpoint-up(medium){
+            flex: 0 0 50%;
+        }
+        @include breakpoint-up(large){
+            flex:1;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 1.875rem;
+        @include breakpoint-up(large){
+            margin-bottom: 2.75rem;
+        }
+        
+    }
+
+    &__title{
+        font-size: 1.25rem;
+       //font-weight: 300;
+       font-weight:400;
+        line-height: 1.15;
+        color: $darkBlue; 
+        margin-bottom: 1rem;//24px
+        color: darkred;
+        @include breakpoint-up(large){
+          //  font-size: 1.5rem; update for petronees
+            font-size:1.2rem;
+            margin-bottom: 1.5rem;//34px   
+        }
+
+    }
+
+   
+   &__description {
+       font-size: 0.875rem;
+       line-height: 1.5;
+   }
+
+
+
+
+}
